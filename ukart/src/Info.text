@@ -1,0 +1,82 @@
+email : rohit12@gmail.com
+password: Nagar@321
+
+Product Fields:
+name, price, description, image
+
+END POINT FOR AUTHENTICATION:
+1. REGISTRATION API
+   POST: http://localhost:8080/api/auth/register
+
+2. LOGIN API
+   POST: http://localhost:8080/api/auth/login
+
+3. USER API
+   POST: http://localhost:8080/api/auth/user
+
+END POINTS FOR PRODUCT:
+1. FOR ADD Product:
+   POST: http://localhost:8080/api/products
+
+   JSON BODY:
+   {
+    "name":"Men Solid Polo Neck Poly Cotton Maroon T-Shirt",
+    "price":399,
+    "description":"These tshirt provides you the comfort you need with the style you want.",
+    "image":"https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70&crop=false"
+   }
+
+2. FOR DELETE Product:
+   DELETE: http://localhost:8080/api/product/{product_id}
+
+3. For UPDATE Product:
+   PUT: http://localhost:8080/api/product/{product_id}
+
+4. FOR GET Product list:
+   GET: http://localhost:8080/api/products
+
+END POINT FOR CART:
+1. CHECK CART API
+   POST: http://localhost:8080/api/cart
+
+2. ADD PRODUCT TO CART API
+   POST: http://localhost:8080/api/cart/add
+
+JSON BODY:
+{
+   "email":"rohit12@gmail.com",
+   "password":"Nagar@321",
+   "product_id": "8"
+   
+}
+
+3. CART QUANTITY UPDATE API
+   POST: http://localhost:8080/api/cart/update
+
+JSON BODY:
+{
+   "email":"rohit12@gmail.com",
+   "password":"Nagar@321",
+   "product_id": "8",
+   "quantity": "3"
+   
+}
+
+4. REMOVE FROM CART API
+   POST: http://localhost:8080/api/cart/remove
+
+JSON BODY:
+{
+   "email":"rohit12@gmail.com",
+   "password":"Nagar@321",
+   "product_id": "8"
+}
+
+5. CLEAR CART API
+   POST: http://localhost:8080/api/cart/clear
+
+JSON BODY:
+{
+   "email":"rohit12@gmail.com",
+   "password":"Nagar@321"
+}
